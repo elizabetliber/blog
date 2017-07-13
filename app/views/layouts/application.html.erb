@@ -10,9 +10,24 @@
 
   <body>
 
-  <%= link_to 'Все статьи', posts_path %>
-  <%= link_to 'Новая статья', new_post_path %>
+    <div class="container">
 
-  <%= yield %>
+      <nav class="navbar navbar-light mb-4" style="background-color: #fdd54f;">
+
+        <%= link_to(posts_path) do %>
+          <h1 class="navbar-brand mb-0">Blog</h1>
+        <% end %>
+
+        <form class="form-inline">
+          <%= link_to(new_post_path) do %>
+            <button class="btn btn-outline-success" type="button">Новая статья</button>
+          <% end %>
+        </form>
+
+      </nav>
+
+      <%= yield %>
+    </div>
+
   </body>
 </html>

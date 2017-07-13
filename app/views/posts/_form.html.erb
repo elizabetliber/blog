@@ -1,22 +1,22 @@
 <%= form_for @post do |f| %>
 
-  <div class="form_control">
+  <div class="form_group">
     <%= f.label :title %>
-    <%= f.text_field :title%>
+    <%= f.text_field :title, class: 'form-control'%>
   </div>
 
-  <div class="form_control">
+  <div class="form_group">
     <%= f.label :summary %>
-    <%= f.text_area :summary%>
+    <%= f.text_area :summary, class: 'form-control'%>
   </div>
 
-  <div class="form_control">
+  <div class="form_group">
     <%= f.label :body %>
-    <%= f.text_area :body%>
+    <%= f.text_area :body, class: 'form-control'%>
   </div>
 
-  <div class="form_control">
-    <%= f.submit 'сохранить' %>
+  <div class="form_group mt-4">
+    <%= f.submit 'сохранить', class: 'btn btn-primary' %>
+    <%= link_to 'Назад', :back,class: 'btn btn-outline-secondary' %>
   </div>
-
 <% end %>

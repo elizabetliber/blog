@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
 
   def index
@@ -37,7 +37,7 @@ before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def destroy
     @post.destroy
-    redirect_to posts_path
+    redirect_to @post
   end
 
   private
